@@ -19,7 +19,7 @@ public class Bank implements iBank {
             this.branches.add(branch);
             return true;
         }
-        return null;
+        return false;
     }
 
     @Override
@@ -55,14 +55,14 @@ public class Bank implements iBank {
             System.out.println("Customer Details  for Branch " + branchName);
             if (printTransaction==true) {
                 for (Customer customer : listOfCustomers) {
-                    ArrayList<Double> allTransactions = customer.getTransactions();
+                    ArrayList<Double> everyTransaction = customer.getTransactions();
                     int count = 0;
                     count = listOfCustomers.indexOf(customer) + 1;
                     System.out.printf("Customer: %s %d" , (customer.getName()) , count );
                     System.out.println("Transactions");
-                    for (double transaction : allTransactions) {
+                    for (double transaction : everyTransaction) {
                         int num = 0;
-                        num = allTransactions.indexOf(transaction) + 1;
+                        num = everyTransaction.indexOf(transaction) + 1;
                         System.out.printf(" [%d] Amount %f" ,num,transaction);
                     }
                 }

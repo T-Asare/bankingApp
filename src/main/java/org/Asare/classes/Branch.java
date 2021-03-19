@@ -24,7 +24,7 @@ public class Branch implements iBranch {
 
     @Override
     public String getName() {
-        return null;
+        return this.name;
     }
 
     @Override
