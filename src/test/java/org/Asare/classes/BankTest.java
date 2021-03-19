@@ -13,16 +13,20 @@ public class BankTest {
 
     @org.junit.Test
     public void addBranch() {
-        assertTrue(bank.addCustomer("Kasoa","Tano Twum", 456));
+        assertTrue(bank.addBranch("Bantama"));
         assertFalse(bank.addBranch("Kasoa"));
     }
 
 
     @org.junit.Test
     public void addCustomer() {
+        assertFalse(bank.addCustomer("Kasoa","Tano Twum",456));
+        assertTrue(bank.addCustomer("Kasoa","Harvey", 203));
     }
 
     @org.junit.Test
     public void addCustomerTransaction() {
+        assertTrue(bank.addCustomerTransaction("Kasoa","Tano Twum", 596));
+        assertFalse(bank.addCustomerTransaction("Georgetown","Harvey", 26));
     }
 }
