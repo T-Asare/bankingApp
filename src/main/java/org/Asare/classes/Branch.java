@@ -28,8 +28,8 @@ public class Branch implements iBranch {
     }
 
     @Override
-    public Customer getCustomers() {
-        return null;
+    public ArrayList<Customer> getCustomers() {
+        return this.customers;
     }
 
     @Override

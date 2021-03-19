@@ -8,7 +8,7 @@ public interface iBranch {
     String name();
     ArrayList <Customer> customers();
     String getName();
-    Customer getCustomers();
+    ArrayList<Customer> getCustomers();
     Boolean newCustomer(String customerName, double initialTransaction);
     Boolean addCustomerTransaction(String customerName, double transaction);
 
